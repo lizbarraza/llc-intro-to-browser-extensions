@@ -30,6 +30,7 @@
       </h1>
 
       <!-- FILL IN INSTRUCTOR DETAILS -->
+
       <img class="instructor" src="https://lh3.googleusercontent.com/Ghaj3vcEg_c1uFp5euxqFMSQXM8Ck3lyZ7afsWMh_hWivvE0yQXlYJX2lRQ8Il95X5TeeK4SIiAMBvzmCGGM7--9a7lhtBHyMdt3sndDdCNtbBmHbUJNKV2zTYwF8btOUxV65xYs0yLXR6Y497ivZXcwLJgx2KBfzl5s7SDY9u7zgoHo3jwfEN1GtdAZcuhJDL6a75cufhlPT-9ep1s7DHlNvJBW_1hDvz74cR07iX_Wg7-al9ZMwcDk4L4ueuWsYYdiusJzrszSIvOgmKjGTmAtsHKD6tncyb8GvT4jyU2MXtLscY2O-Vsc6G8hqZAyI_aZfzJ8hpmVeLQJEpPTFJ4GMdMH5tU6mTT0WCvHwO45QlDIe2h0ABiyi6_BBkWOgRSzClK0rqF2vfTnPSXKnqlObcSCuStK9a1joXU4g9gyg2x3wOW-m1NjV0QdPJfMEouvrb2DHM--O2NwR-COjuo3k2arBj9FSs9v-wsOYHrXjEMr_FbbRDY-USZtP4xREYXxmxa_mUKRFODmNSh6Osp7wPKiFwApXERi-8tH0umAdyMFL1QgzFUpnoDlsSdD5TBTKS-4F5itSLrGpdC9sNNTgvR2FIPxKbEj0ZOzZyY77WEpveuFqY2GO1k420ciWPF7YcI91QHqff6HpIZHobmmcI5ds0o1RH2xLGYslcipyqNmWVWbn0X_Jg=w640-h426-no" alt="Liz Barraza">
       <h2><span class="cursive">with</span> Liz Barraza</h2>
       <ul>
@@ -84,7 +85,7 @@
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #Coders' Code
+        #Coders' code
 
         1. Be friendly and welcoming
         1. Be respectful of others by choosing words and actions with care
@@ -112,7 +113,7 @@
 
         Browser extensions are small pieces of code that make your web browsing experience more fun, more useful, more private or more public.
 
-        ![](framework/img/workshop/extensionExamples.png)
+        ![Various browser extension icons.](framework/img/workshop/extensionExamples.png)
 
         They usually show themselves as buttons in the top bar of your web browser and allow some extra functionality that doesn't come with your browser by default.
       </script>
@@ -156,7 +157,7 @@
 
         The internet needs more cats! So we're going to build an extension that will replace every image on the page with kittens (or the animal of your choosing). It should look a little like this: <!-- .element: class="delayed" -->
 
-        ![](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
+        ![wolfewylie's Twitter profile, with all images replaced with cat images.](framework/img/workshop/sample_page.png)<!-- .element: class="delayed" -->
 
       </script>
     </section>
@@ -167,7 +168,7 @@
 
         We'll be working in Chrome today. So to get started, we need to get Chrome to treat us like the software developers we are.
 
-        ![](framework/img/workshop/got_this.gif)
+        ![Liz Lemon from the TV show 30 Rock says "Let's Do This".](framework/img/workshop/got_this.gif)
       </script>
     </section>
 
@@ -175,7 +176,7 @@
       <script type="text/template">
         #Get into the extensions manager
 
-        ![](framework/img/workshop/chrome_extension_location.png)
+        ![Click 'Customize and and Control Google Chrome' (three dots in the top left of the browser window). Go to 'More Tools', and then click on 'Extensions'.](framework/img/workshop/chrome_extension_location.png)
       </script>
     </section>
 
@@ -227,13 +228,13 @@
 
         The basics of a browser extension are pretty straight forward. All we have to kick things off are a folder of images, and a file called manifest.json.
 
-        ![](framework/img/workshop/first_files.png)
+        ![The project directory, which contains an images folder and a file called manifest.json. The images folder contains 4 images: get_started16.png, get_started32.png, get_started48.png, and get_started128.png.](framework/img/workshop/first_files.png)
       </script>
     </section>
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        # The Manifest file
+        # The manifest file
 
         The manifest file is going to come up a lot in this workshop. It's the backbone of everything that your extension is and does. The manifest is where you can set the title and description, icons and all of those fancy details. But it's also where you can ask people using your extension for special permissions to control web pages.
 
@@ -271,18 +272,18 @@
         Change your manifest file to include an "icons" parameter.
 
         ```javascript
-{
-  "name": "Getting Started Example",
-  "version": "2.0",
-  "description": "First project to build a fresh chrome extension",
-  "manifest_version": 2,
-  "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
-  }
-}
+        {
+          "name": "Getting Started Example",
+          "version": "2.0",
+          "description": "First project to build a fresh chrome extension",
+          "manifest_version": 2,
+          "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
         ```
 
       </script>
@@ -305,7 +306,7 @@
 
         Sometimes you'll get an error when you try to refresh your extension. That might look like this:
 
-        ![](framework/img/workshop/extension_load_error.png)
+        ![Failed to load extension. File: ~/Documents/LLC/clc-intro-to-chrome-extensions/first-extension. Error: Manifest is not valid JSON. Line: 12, column: 4, Trailing comma not allowed.](framework/img/workshop/extension_load_error.png)
 
         The good news it's very clear about what's broken, showing you which line number it's on, which column (how many letters in) and in which file. This makes it much easier to go in and fix it. When you're done, click "retry" to give it another shot.
       </script>
@@ -318,14 +319,14 @@
 
         You've made a browser extension!
 
-        ![](framework/img/workshop/thatsall.gif)
+        ![The ending screen from Looney Toons. "That's All Folks".](framework/img/workshop/thatsall.gif)
 
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
-        ![](framework/img/workshop/kidding.gif)
+        ![Christina Aquilera from the TV show, the Voice, raising her hands out and saying "Just Kidding!"](framework/img/workshop/kidding.gif)
 
         This is what we call a "Hello World" moment: Proof that the basic idea works. Now we can start building on it.
 
@@ -345,14 +346,14 @@
         But what the button looks like, and what the button triggers, that's all defined in the manifest. It looks a little like this:
 
         ```javascript
-"page_action": {
-    "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
-    }
-}
+        "page_action": {
+          "default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+          }
+        }
         ```
 
       </script>
@@ -362,7 +363,7 @@
       <script type="text/template">
         #Press the button
 
-        ![](framework/img/workshop/pressbutton.gif)
+        ![Buddy the Elf from the movie Elf pressing all the buttons in an elevator.](framework/img/workshop/pressbutton.gif)
 
         Buttons are really fun. We should make our button do something.
       </script>
@@ -393,13 +394,13 @@
 
         Every Chrome extension ever made requires permission to operate. It's just a question of what they want to do and what they need permission from the user to do.
 
-        Take **10 minutes** with your neighbour to look at some examples of Manifest.json files in other chrome extensions and see what kinds of permissions they're looking for.
+        Take **10 minutes** with your neighbour to look at some examples of manifest.json files in other Chrome extensions and see what kinds of permissions they're looking for.
 
-        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud to butt</a>
+        <a href="https://github.com/panicsteve/cloud-to-butt/blob/master/Source/manifest.json">Cloud To Butt</a>
 
-        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as ebook</a>
+        <a href="https://github.com/alexadam/save-as-ebook/blob/master/web-extension/manifest.json">Save as eBook</a>
 
-        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamperchrome</a>
+        <a href="https://github.com/google/tamperchrome/blob/master/extension/manifest.json">Tamper Chrome</a>
 
         <a href="https://github.com/th3crack3n/giphy-extension/blob/master/manifest.json">Giphy</a>
 
@@ -423,7 +424,6 @@
         "background": {
           "scripts": ["script.js"]
         }
-
         ```
 
       </script>
@@ -488,7 +488,7 @@
         **In your script.js file**, underneath the existing function that's already there:
 
         ```javascript
-chrome.pageAction.onClicked.addListener()
+        chrome.pageAction.onClicked.addListener()
         ```
 
         This is a bit of a mouthful so let's look at it:
@@ -507,14 +507,14 @@ chrome.pageAction.onClicked.addListener()
         It's verbose, that's for sure. Here's the next part:
 
         ```javascript
-function() {}
+        function() {}
         ```
         A function is essentially a command, or series of commands, to run on demand. This part sits in between the parentheses for the previous part. It's what will be triggered as soon as you press the button.
 
         Together, they look like this:
 
         ```javascript
-chrome.pageAction.onClicked.addListener( function() {} );
+        chrome.pageAction.onClicked.addListener( function() {} );
         ```
 
         The portion in between the curly braces  {}  is where we focus our attention now.
@@ -529,7 +529,10 @@ chrome.pageAction.onClicked.addListener( function() {} );
         This is the part where we use the "active tab" permission we put in our manifest earlier.
 
         ```javascript
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
+        chrome.tabs.query(
+          {active: true, currentWindow: true},
+          function(tabs) { }
+        )
         ```
 
         Chrome first goes to the active window you have open right now, then the active tab you have open right now.
@@ -541,9 +544,12 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
         All together, your script file should look like this: <!-- .element: class="delayed" -->
 
         ```javascript
-chrome.pageAction.onClicked.addListener( function() {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) { } )
-});
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) { }
+          )
+        });
         ```
         <!-- .element: class="delayed" -->
 
@@ -564,10 +570,10 @@ chrome.pageAction.onClicked.addListener( function() {
         Inside our latest set of curly braces ( {} ) add this little bit:
 
         ```javascript
-chrome.tabs.executeScript(
-  tabs[0].id,
-  {code:  'document.body.style.backgroundColor = "green";' }
-);
+        chrome.tabs.executeScript(
+          tabs[0].id,
+          {code: 'document.body.style.backgroundColor = "green";'}
+        );
         ```
 
         PAUSE! Any guesses on what this means?
@@ -594,7 +600,7 @@ chrome.tabs.executeScript(
         Comments end up looking something like this:
 
         ```javascript
-        //This is just a comment
+        // This is just a comment
         ```
 
       </script>
@@ -607,6 +613,7 @@ chrome.tabs.executeScript(
         Overall your whole script.js file should look like this.
 
         ```javascript
+
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
    chrome.declarativeContent.onPageChanged.addRules([{
      conditions: [new chrome.declarativeContent.PageStateMatcher({
@@ -616,16 +623,17 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
      actions: [new chrome.declarativeContent.ShowPageAction()]
    }]);
  });
-
-chrome.pageAction.onClicked.addListener(function() {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-      tabs[0].id,
-      {code:  'document.body.style.backgroundColor = "green";' }
-    );
-  });
-});
-      ```
+        chrome.pageAction.onClicked.addListener(function() {
+          chrome.tabs.query(
+            {active: true, currentWindow: true},
+            function(tabs) {
+              chrome.tabs.executeScript(
+              tabs[0].id,
+              {code: 'document.body.style.backgroundColor = "green";'}
+            );
+          });
+        });
+        ```
 
       </script>
     </section>
@@ -635,7 +643,7 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #That's right
 
-        ![](framework/img/workshop/unimpressed.gif)
+        ![Deputy Chief Hardy from the movie 22 Jump Street looking very unimpressed.](framework/img/workshop/unimpressed.gif)
 
         All of those steps until now have allowed us to run one line of JavaScript on the page loaded into our tab:
 
@@ -672,7 +680,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
         You have all of the power.
 
-        ![](framework/img/workshop/hack.gif)
+        ![A cartoon character dressed in all black with orange goggles furiously typing on a laptop.](framework/img/workshop/hack.gif)
 
       </script>
     </section>
@@ -762,7 +770,11 @@ chrome.pageAction.onClicked.addListener(function() {
         Tags can be *nested* within other tags like this:
 
         ```
-        <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
+        <outertag>
+          outer content
+          <innertag>inner content</innertag>
+          outer content
+        </outertag>
         ```
 
         Nested tags create a family tree-like relationship, often referred to as *parent* and *child* nodes.
@@ -796,13 +808,15 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         # Attributes in images
 
-        Images, the focus of our work today, have one really really import attribute.
+        Images, the focus of our work today, have one really really important attribute.
 
         The `src` attribute is used to identify which image we're loading into the page.
 
         ```
-        <img src="images/picture.jpg">
+        <img src="images/picture.jpg" alt="Picture description">
         ```
+
+        In addition to the `src` attribute, the `alt` attribute is also required in order to help describe the image for people using assistive technology, such as a screen reader.
 
         An ```img``` tag by itself doesn't do much until you tell it what image file to load. Once it knows what image you want to use, though, then it becomes powerful.
 
@@ -866,15 +880,15 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #All three files
 
-        We have three files now: The manifest, the script.js and the main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
+        We have three files now: manifest.json, script.js and main.js. They all reference each other, so one calls to the other, which in turn calls to the third.
 
-        Manifest --> script.js --> main.js
+        manifest.json → script.js → main.js
 
         The manifest tells the browser to listen to what script.js tells it to do.
 
-        Script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
+        script.js tells the browser to activate the extension button, but not do anything until the button is pressed. When the button is pressed, run anything that's in main.js.
 
-        Main.js tells the current page you're on to turn green.
+        main.js tells the current page you're on to turn green.
 
       </script>
     </section>
@@ -913,15 +927,15 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #Exercise in pairs (10 minutes)
 
-        ![](framework/img/workshop/corgis.gif)
+        ![Two corgis walking side-by-side on a moving treadmill. One has a floppy ear.](framework/img/workshop/corgis.gif)
 
         Pair up and take some time to figure out what else you can change this page using some of these other style rules:
 
-        Change <a href="https://www.w3schools.com/cssref/pr_font_font-size.asp">font sizes</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font sizes</a>?
 
-        Change <a href="https://www.w3schools.com/cssref/css_colors.asp">colours</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">colours</a>?
 
-        Change <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">rotations and angles</a>?
+        Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">rotations and angles</a>?
 
         ----
 
@@ -942,7 +956,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # What Is JavaScript?
+        # What is JavaScript?
 
         * controls the *behavior* of HTML documents
         * used to animate, hide or show items
@@ -951,7 +965,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
         Here's what JavaScript looks like:
 
-        ```
+        ```javascript
         var myVariable = "Hello World";
         function sayHello(){
           alert(myVariable);
@@ -963,7 +977,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
     <section class="slide highlight" data-markdown>
       <script type="text/template">
-        # JavaScript is a Programming Language
+        # JavaScript is a programming language
 
         Because JavaScript is a programming language, the structure and syntax include more complexities than HTML or CSS.
 
@@ -1021,7 +1035,7 @@ chrome.pageAction.onClicked.addListener(function() {
           * the result looks kind of like `camelHumps`
         * Cannot contain reserved symbols:
           * math symbols (+, -, =, etc...)
-          * javascript-specific symbols ({, }, :, etc...)
+          * JavaScript-specific symbols ({, }, :, etc...)
         * Cannot begin with:
           * a digit (0 - 9)
         * JavaScript is case sensitive
@@ -1035,7 +1049,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Variable Types: Strings
+        # Variable types: Strings
 
         When storing text values, like words or sentences, the variable type is a *string* value.
 
@@ -1057,7 +1071,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Variable Types: Strings & Concatenation
+        # Variable types: Strings & concatenation
 
         You can *add* strings together to join multiple values. This is called **concatenation**.
 
@@ -1069,11 +1083,9 @@ chrome.pageAction.onClicked.addListener(function() {
 
         The JavaScript above **concatenates** the three items together like so:
 
-        ```
-        var greetingFull = greeting + " " + greetingTime + "!";
-        var greetingFull = Good + space + morning + exclamation mark
-        var greetingFull = Good morning!
-        ```
+        * greeting + " " + greetingTime + "!";
+        * Good + space + morning + exclamation mark
+        * Good morning!
       </script>
     </section>
 
@@ -1089,7 +1101,7 @@ chrome.pageAction.onClicked.addListener(function() {
         var allImages = document.getElementsByTagName('img');
         ```
 
-        This creates a variable that stores a list of every image on the page, which we can take a look at individually in something called The Console.
+        This creates a variable that stores a list of every image on the page, which we can take a look at individually in something called the Console.
       </script>
     </section>
 
@@ -1101,7 +1113,7 @@ chrome.pageAction.onClicked.addListener(function() {
         * enter commands and interact directly with a web page
         * can also log diagnostic information and check for errors
 
-        The console in Chrome looks like this:
+        The Console in Chrome looks like this:
         ![The Console](framework/img/workshop/the_console_x.jpg)
 
         **Important!** The blue `>` symbol represents a space to enter your input but you don't have to actually type the symbol.
@@ -1112,7 +1124,7 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         #Accessing the Console
 
-        You can open the console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
+        You can open the Console when viewing _any_ HTML page. In Chrome, there are different ways to open the Console tab.
 
         Keyboard shortcut:
         `COMMAND + OPTION + J` (MAC)  / `CONTROL + SHIFT + J` (WINDOWS)
@@ -1121,28 +1133,28 @@ chrome.pageAction.onClicked.addListener(function() {
 
         Select: `View > Developer > JavaScript Console`.
 
-        Open the console in this slide presentation. Take a moment to practice opening and closing the console until you’re comfortable with it.
+        Open the Console in this slide presentation. Take a moment to practice opening and closing the Console until you’re comfortable with it.
 
         ---
 
         ###Pro tip!
-        The console also shows any errors on the page so if you open the console on any existing web page, you *may* see some error messages.
+        The Console also shows any errors on the page so if you open the Console on any existing web page, you *may* see some error messages.
 
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Using the console
+        # Using the Console
 
-        In our main.js file, we can write new images to the console so we can see what they do and where they are.
+        In our main.js file, we can write new images to the Console so we can see what they do and where they are.
 
         ```javascript
         var allImages = document.getElementsByTagName('img');
         console.log(allImages);
         ```
 
-        Now refresh and run your extension: You'll see something new being injected into the console. It's a list of every image on the page. Hover your mouse over each of them and it will even show you which image on the page that one is.
+        Now refresh and run your extension: You'll see something new being injected into the Console. It's a list of every image on the page. Hover your mouse over each of them and it will even show you which image on the page that one is.
 
       </script>
     </section>
@@ -1163,7 +1175,7 @@ chrome.pageAction.onClicked.addListener(function() {
 
         And then what?
 
-        Go to the console.
+        Go to the Console.
 
         And then what?
 
@@ -1177,7 +1189,7 @@ chrome.pageAction.onClicked.addListener(function() {
       <script type="text/template">
         # Exercise (5 minutes)
 
-        Spend some time familiarizing yourself with the console and how to collect elements from your page. Can you collect h1 tags? Images? Paragraphs?
+        Spend some time familiarizing yourself with the Console and how to collect elements from your page. Can you collect h1 tags? Images? Paragraphs?
 
       </script>
     </section>
@@ -1208,12 +1220,12 @@ chrome.pageAction.onClicked.addListener(function() {
         Images are so much fun. In the wild world of HTML, images look like this:
 
         ```
-        <img alt="" src="http://placekitten.com/100/100">
+        <img src="http://placekitten.com/100/100" alt="">
         ```
 
         Unlike a lot of tags, ```img``` tags don't have a closing ```</img>``` at their close.
 
-        That little src= is the source attribute, linking the image tag to the actual image file.
+        That little `src=` is the source attribute, linking the image tag to the actual image file.
 
         We now have the power to change that link as we see fit.
 
@@ -1276,11 +1288,11 @@ chrome.pageAction.onClicked.addListener(function() {
 
         That loop looks a bit like this:
         ```javascript
-var allImages = document.getElementsByTagName('img');
-console.log(allImages);
-for (var i = 0; i < allImages.length; i++) {
-  console.log(allImages[i]);
-}
+        var allImages = document.getElementsByTagName('img');
+        console.log(allImages);
+        for (var i = 0; i < allImages.length; i++) {
+          console.log(allImages[i]);
+        }
         ```
 
         Let's break that down:
@@ -1319,7 +1331,7 @@ for (var i = 0; i < allImages.length; i++) {
         ```javascript
         var participants = allOfYouHereToday;
 
-        for (var i = 0; i < participants.length(); i++) {
+        for (var i = 0; i < participants.length; i++) {
             participants[i].naeNae;
             participants[i].jazzHands;
             participants[i].vogue;
@@ -1363,7 +1375,9 @@ for (var i = 0; i < allImages.length; i++) {
 
         1. There's a shortcut. If you start typing 'for' in your Atom editor, then hit the "tab" key, it will automatically expand a loop for you. Nifty!
 
-        2. There are cases where you might have more than one loop in your script. In that case, it makes sense to not use the same counter variable for both of them, because they could get confused with each other. In our example, we're using i as the counter variable name. You can use any variable name you like, but using the same variable for two different purposes is usually a bad idea.
+        2. There are cases where you might have more than one loop in your script. In that case, it makes sense to not use the same counter variable for both of them, because they could get confused with each other.
+
+          In our example, we're using `i` as the counter variable name. You can use any variable name you like, but using the same variable for two different purposes is usually a bad idea.
 
       </script>
     </section>
@@ -1373,13 +1387,13 @@ for (var i = 0; i < allImages.length; i++) {
       <script type="text/template">
         # Replacing the images
 
-        Now that we have the allImages[i] that represents the image we want to change, we can add a line of javascript in our loop that looks like this:
+        Now that we have the `allImages[i]` variable that represents the image we want to change, we can add a line of JavaScript in our loop that looks like this:
 
         ```javascript
         allImages[i].setAttribute('src', 'http://placekitten.com/200/300');
         ```
 
-        That will take the src attribute of the image and replace whatever is currently there with a placekitten link.
+        That will take the `src` attribute of the image and replace whatever is currently there with a placekitten link.
 
         Go ahead. Give it a try. Load up any page and place some kittens (or puppies or bears or Bill Murray).
 
@@ -1406,10 +1420,10 @@ for (var i = 0; i < allImages.length; i++) {
         To do this, we need to detect how big the original image in that spot was.
 
         ```javascript
-var imageHeight = allImages[i].clientHeight;
-var imageWidth = allImages[i].clientWidth;
+        var imageHeight = allImages[i].clientHeight;
+        var imageWidth = allImages[i].clientWidth;
         ```
-        Those two lines create two new variables, and use the clientHeight and clientWidth attributes to store how big the original images are.
+        Those two lines create two new variables, and use the `clientHeight` and `clientWidth` attributes to store how big the original images are.
 
 
       </script>
@@ -1422,8 +1436,7 @@ var imageWidth = allImages[i].clientWidth;
         Then we can string together those new height and width values into the placeholder image link to tie it all together.
 
         ```javascript
-allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
-
+        allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
         ```
 
       </script>
@@ -1436,24 +1449,24 @@ allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + 
         Altogether now, this is how that loop ought to look (approximately):
 
         ```javascript
-var allImages = document.getElementsByTagName('img');
+        var allImages = document.getElementsByTagName('img');
 
-for (var i = 0; i < allImages.length; i++) {
-  var imageHeight = allImages[i].clientHeight;
-  var imageWidth = allImages[i].clientWidth;
-  allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight)
-}
+        for (var i = 0; i < allImages.length; i++) {
+          var imageHeight = allImages[i].clientHeight;
+          var imageWidth = allImages[i].clientWidth;
+          allImages[i].setAttribute('src', 'http://placekitten.com/' + imageWidth + '/' + imageHeight);
+        }
         ```
 
         ----
 
         ##Note
 
-        If you're using the offline mode, you can't use the width and height attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
+        If you're using the offline mode, you can't use the `width` and `height` attributes to figure out the best image for the page. But you can randomize the images you have available to you to make the best of it.
 
-        The first variable, baseLink, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
+        The first variable, `baseLink`, should be the first part of your own browser's link, not exactly as copied below. All of this goes inside the the for loop.
 
-        ```
+        ```javascript
         var baseLink = "file:///Users/williamwolfewylie/Desktop/clc-intro-to-chrome-extensions/offlineImages/";
         var imagesToPick = ['100.jpg', '200.jpg', '300.jpg', '400.jpg', '500.jpg'];
         var photoToInsert = imagesToPick[Math.floor(Math.random() * imagesToPick.length)];
@@ -1469,7 +1482,7 @@ for (var i = 0; i < allImages.length; i++) {
         If you want some extra fun, you can still spin the page when people click the button, giving the whole thing a fun transition effect.
 
         ```javascript
-document.body.style = "transition: 2s; transform: rotate(1080deg);";
+        document.body.style = "transition: 2s; transform: rotate(1080deg);";
         ```
 
       </script>
@@ -1483,7 +1496,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         (Or <a href="#slide100">Skip ahead</a> to wrap up)
 
-        ![](framework/img/workshop/stretch.gif)
+        ![The Incredibles posing for battle.](framework/img/workshop/stretch.gif)
 
         Let's do this
       </script>
@@ -1544,8 +1557,8 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         ```javascript
         allImages[i].addEventListener('click', function() {
-          console.log(this)
-        })
+          console.log(this);
+        });
         ```
 
         Let's go over each part:
@@ -1563,7 +1576,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         #Wait - what's THIS
 
         ```javascript
-          console.log(this)
+        console.log(this);
         ```
 
         That's weird.
@@ -1583,15 +1596,15 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         ```javascript
         for (var i = 0; i < allImages.length; i++) {
-            allImages[i].addEventListener('click', function() {
-            console.log(this)
+          allImages[i].addEventListener('click', function() {
+            console.log(this);
           })
         }
         ```
 
         Since we have ```this``` we can also act on it just as we did with our previous exercise.
 
-        ```
+        ```javascript
         var thisImageHeight = this.clientHeight;
         var thisImageWidth = this.clientWidth;
         var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
@@ -1614,7 +1627,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
             var thisImageWidth = this.clientWidth;
             var imageLink = "http://placekitten.com/" + thisImageWidth + "/" + thisImageHeight;
             this.setAttribute('src', imageLink);
-          })
+          });
         }
         ```
 
@@ -1627,7 +1640,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         #Stretch 2: The incredible disappearing element
 
-        ![](framework/img/workshop/drop.gif)
+        ![Violet from the Incredibles touches her uniform and it disappears. She looks shocked.](framework/img/workshop/drop.gif)
 
 
       </script>
@@ -1641,7 +1654,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Like, we can make them disappear.
 
-        Taken five minutes and see if you can come up with the two different ways we could remove an element from the page.
+        Take five minutes and see if you can come up with the two different ways we could remove an element from the page.
 
       </script>
     </section>
@@ -1652,7 +1665,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         First up, we have to select every text element or image element on the page.
 
-        ```
+        ```javascript
         var myElementsToDisappear = document.getElementsByTagName('img');
         ```
 
@@ -1668,11 +1681,11 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Loop through them and add your click event listener to them, same as before.
 
-        ```
+        ```javascript
         for (var i = 0; i < myElementsToDisappear.length; i++) {
           myElementsToDisappear[i].addEventListener('click', function() {
 
-          })
+          });
         }
         ```
 
@@ -1702,12 +1715,12 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         - Changing if it's rendered.
 
         Option 1:
-        ```
+        ```javascript
         this.setAttribute('style', 'opacity: 0')
         ```
 
         Option 2:
-        ```
+        ```javascript
         this.setAttribute('style', 'visibility: hidden')
         ```
 
@@ -1722,7 +1735,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Removing it from view is also a much simpler proposal:
 
-        ```
+        ```javascript
         this.remove()
         ```
 
@@ -1735,7 +1748,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         #Good stretch, everyone!
 
-        ![](framework/img/workshop/big_stretch.gif)
+        ![A black cat on a light carpet rolls over slightly and then does a great big stretch.](framework/img/workshop/big_stretch.gif)
 
       </script>
     </section>
@@ -1746,7 +1759,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
 
         Who wants to show off their own slice of creativity they added to this extension?
 
-        ![](framework/img/workshop/sponge.gif)
+        ![SpongeBob moves his hands apart above his head in an arc and a rainbow appears between his hands.](framework/img/workshop/sponge.gif)
 
       </script>
     </section>
@@ -1758,12 +1771,12 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         We learned a whole pile of things:
 
         * the basics of how to install and trigger browser extensions
-        * what javascript looks like and how to customize it
+        * what JavaScript looks like and how to customize it
         * HTML attributes
         * placeholder images!
         * some of the ethics around running your code on other people's computers
 
-        <p>We can also use what we've learned today to create something fun, like this: <a href="http://nthitz.github.io/turndownforwhatjs/">Turn Down For What</a>, or somthing helpful, like this: <a href="https://chrome.google.com/webstore/detail/zoom-text-only/jamhfhbppcmkgghlkeieococonlbppjg">Zoom Text Only</a></p><!-- .element: class="delayed" -->
+        <p>We can also use what we've learned today to create something fun, like this: <a href="http://nthitz.github.io/turndownforwhatjs/">Turn Down For What</a>, or something helpful, like this: <a href="https://chrome.google.com/webstore/detail/zoom-text-only/jamhfhbppcmkgghlkeieococonlbppjg">Zoom Text Only</a></p><!-- .element: class="delayed" -->
 
       </script>
     </section>
@@ -1772,7 +1785,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
       <script type="text/template">
         # You did it!
 
-        ![](framework/img/workshop/done.gif)
+        ![Anna from the movie Frozen squealing with excitement.](framework/img/workshop/done.gif)
       </script>
     </section>
 
@@ -1806,7 +1819,7 @@ document.body.style = "transition: 2s; transform: rotate(1080deg);";
         <span>Building browser extensions<br></span>
       </h2>
 
-      <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <img class="instructor" src="https://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
       <h2><span class="cursive">with</span> Instructor Name</h2>
       <ul>
         <li><a href="mailto:">hello@email.com</a></li>
