@@ -1,0 +1,5 @@
+Notes from experience National Code day 2018
+
+- Give priority to the javascript part: Try to finish before lunch with HTML explanations and some concepts with javascript.
+- Look for a better way to explain for loop (#teaspoons of sugar in your coffee)
+-  
